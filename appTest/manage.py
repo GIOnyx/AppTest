@@ -2,6 +2,10 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
+
+# Ensure repository root is on sys.path so sibling app packages are importable
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 
 def main():
